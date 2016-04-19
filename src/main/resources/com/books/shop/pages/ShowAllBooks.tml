@@ -1,0 +1,62 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+<head>
+    <link rel="stylesheet" type="text/css" href="${context:mybootstrap/css/books.css}"/>
+</head>
+<body class="body">
+
+<div class="eg">
+    <h1 class="h1">All Books </h1>
+    <t:Form t:id="buyForm">
+    <table class="grid">
+        <thead>
+        <tr>
+            <th>Book ID</th>
+            <th>Book Name</th>
+            <th>Books Count</th>
+            <th>Check</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr t:type="Loop" t:source="books" t:value="book">
+            <td>${book.bookId}</td>
+            <td>${book.bookName}</td>
+            <td>${book.bookCount}</td>
+
+            <td>
+
+                <input t:type="checkbox" value="checkedBook" />
+
+            </td>
+            <td>
+                <t:actionlink t:id="delete" t:context="${book.bookId}">Delete
+                </t:actionlink>
+            </td>
+
+        </tr>
+        </tbody>
+        </table>
+        <br/>
+        <table>
+            <tr>
+                <td>
+            <t:submit class="btn btn-large btn-primary" value="Add book to shoppingbasket"/>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+        </table>
+    </t:Form>
+    <t:Form t:id="bookss">
+        <table>
+            <tr>
+                <td>
+                    <t:submit class="btn btn-large btn-primary" value="Add Book"/>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+        </table>
+    </t:Form>
+</div>
+</body>
+</html>

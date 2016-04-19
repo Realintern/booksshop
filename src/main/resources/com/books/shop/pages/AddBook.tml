@@ -1,0 +1,15 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+<body>
+  <div >
+    <t:form t:id="add">
+    <div >
+        <h2>Add book</h2>
+            <t:textfield t:id="bookName"   validate="required" placeholder="Book Name"/>
+            <t:textfield t:id="bookCount" validate="required" placeholder="10"/>
+            <t:submit class="btn btn-large btn-primary" value="Add"/>
+    </div>
+    </t:form>
+  </div>
+</body>
+</html>
